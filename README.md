@@ -64,7 +64,6 @@ Pico → UART → ESP32 → MQTT → Flask → Browser
 
 ## Running
 
-Start everything with:
 
 ```bash
 ./startup.sh
