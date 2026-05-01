@@ -37,7 +37,7 @@ This project builds a simple multi-platform embedded system:
 
 | Pico | ESP32 |
 |------|------|
-| TX   | RX (GPIO4) |
+| TX (GP0)   | RX (GPIO4) |
 | GND  | GND |
 
 > Both boards must share a common ground.
