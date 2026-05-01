@@ -1,0 +1,5 @@
+version: "1.0"
+description: "Lab 12 Part B - Pico to ESP32-C6 MQTT Bridge"
+dependencies:
+  esp-mqtt: "*"
+  cjson: "*"
