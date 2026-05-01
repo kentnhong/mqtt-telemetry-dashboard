@@ -9,6 +9,10 @@ This project builds a simple multi-platform embedded system:
 - The ESP32 publishes the data to an **MQTT broker**
 - A **Flask dashboard** subscribes to the data and displays it in real time
 
+## Sample Output
+
+![Dashboard Screenshot](images/dashboard.png)
+
 ---
 
 ## Hardware Prerequisites
