@@ -18,10 +18,11 @@ This project builds a simple multi-platform embedded system:
 ## Hardware Prerequisites
 
 - Raspberry Pi Pico  
-- ESP32-C6 Dev Board  
+- ESP32-C6-DevKitC-1 Board
 - Pushbutton  
 - Jumper wires  
-- Breadboard  
+- Breadboard
+- 10K Ohm Resistor
 
 ---
 
@@ -31,7 +32,8 @@ This project builds a simple multi-platform embedded system:
 - Python 3  
 - Flask (`pip install flask`)  
 - Paho MQTT (`pip install paho-mqtt`)  
-- Mosquitto MQTT Broker  
+- Mosquitto MQTT Broker
+- Zadig
 
 ---
 
@@ -71,3 +73,59 @@ Pico → UART → ESP32 → MQTT → Flask → Browser
 
 ```bash
 ./startup.sh
+```
+
+---
+
+## Pico USB Driver Setup (Zadig)
+
+If your Raspberry Pi Pico is not recognized correctly on Windows (e.g., shows up as `RP2 Boot` or does not appear as a COM port), install the USB driver using Zadig.
+
+### Install Zadig
+
+Download Zadig from:
+https://zadig.akeo.ie/
+
+Run Zadig as Administrator.
+
+---
+
+### Install Driver for Pico
+
+1. Hold the **BOOTSEL** button on the Pico  
+2. Plug the Pico into your computer  
+3. Release BOOTSEL  
+
+The device should appear as:
+
+
+RP2 Boot
+
+
+4. Open Zadig  
+5. Click **Options → List All Devices**  
+6. Select **RP2 Boot** from the dropdown  
+7. In the driver box, select:
+
+
+WinUSB
+
+
+8. Click **Install Driver**
+
+---
+
+### After Installation
+
+- Unplug and reconnect the Pico normally (without holding BOOTSEL)  
+- It should now appear as a **COM port**  
+- PlatformIO should detect it automatically  
+
+---
+
+### Notes
+
+- BOOTSEL mode is only for flashing firmware  
+- Normal operation should show the Pico as a serial device (COM port)  
+- If the Pico is not detected, repeat the steps above  
+
