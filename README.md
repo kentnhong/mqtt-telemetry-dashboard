@@ -67,28 +67,4 @@ Pico → UART → ESP32 → MQTT → Flask → Browser
 Start everything with:
 
 ```bash
-./start_lab12.sh
-
-Then open:
-
-http://127.0.0.1:5000
-Output Format
-
-UART message:
-
-BTN,<count>,<timestamp_ms>
-
-MQTT payload:
-
-{
-  "count": 10,
-  "timestamp_ms": 5000
-}
-
-Topic:
-
-cecs346/lab12/pico/button
-Notes
-Resetting the Pico resets the count
-Restarting Flask clears dashboard history
-ESP32 handles MQTT publishing
+./startup.sh
