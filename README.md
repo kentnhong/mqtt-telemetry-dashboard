@@ -11,7 +11,7 @@ This project builds a simple multi-platform embedded system:
 
 ## Sample Output
 
-![Dashboard Screenshot](images/dashboard.png)
+![Dashboard Screenshot](images/dashboard_example.png)
 
 ---
 
